@@ -74,7 +74,7 @@
    * Initializes the wysihtml5 editor for the textarea.
    */
   Editor.prototype._attachEditor = function() {
-    this._editor = new wysihtml5.Editor(this.$textarea.attr('id'), {
+    this.$el[0]._editor = this._editor = new wysihtml5.Editor(this.$textarea.attr('id'), {
       toolbar: this.$toolbar.attr('id'),
       stylesheets: config.stylesheets,
       parserRules: config.parserRules
